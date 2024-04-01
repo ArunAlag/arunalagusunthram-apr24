@@ -14,7 +14,7 @@ jobs:
           sleep 30
       - name: step2
         run: |
-          touch /tmp/generated_files_arun
+          touch /home/ubuntu/arunalagusunthram-apr24/generated_files_arun
           echo 'file created'
           sleep 30
 ## Name is not important in a step
