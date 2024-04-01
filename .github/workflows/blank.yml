@@ -14,8 +14,8 @@ jobs:
           sleep 30
       - name: step2
         run: |
-          cat /etc/os-release
           touch /tmp/generated_files_arun
+          echo 'file created'
           sleep 30
 ## Name is not important in a step
       - run: uname -a
