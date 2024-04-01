@@ -1,0 +1,21 @@
+# My very first workflow
+name: workflow1
+on: 
+  workflow_dispatch:
+  push:
+
+jobs:
+  job1:
+    runs-on: self-hosted
+    steps: 
+      - name: step1
+        run: |
+          echo "test 1 step 1 completed"
+          sleep 30
+      - name: step2
+        run: |
+          cat /etc/os-release
+          touch /tmp/generated_files_arun
+          sleep 30
+## Name is not important in a step
+      - run: uname -a
