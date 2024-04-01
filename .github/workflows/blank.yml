@@ -1,7 +1,9 @@
 # My very first workflow
 name: workflow1
 on: 
-  push
+  push:
+    branches:
+      - dev
 
 jobs:
   job1:
