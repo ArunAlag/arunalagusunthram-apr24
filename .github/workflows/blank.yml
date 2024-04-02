@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    environment: dev
+    environment: "dev"
     env: 
       greetings: "Hello"
     # runs-on: self-hosted
@@ -16,14 +16,14 @@ jobs:
         run: |
           echo "The initiated user: $greetings $name"
           echo "Github Repository:  ${{GITHUB.REPOSITORY}}"
-          echo "Server Name: ${{env.SERVER_NAME}}"
+          echo "Server Name: ${{vars.SERVER_NAME}}"
           sleep 5
         env: 
           name: "Arun Alagusunthram"
       - name: step2
         run: |
           echo 'workflow run date: ${{vars.CREATED_DATE}}'
-          echo 'worklow on which app: ${{env.APP_NAME}}'
+          echo 'worklow on which app: ${{vars.APP_NAME}}'
           sleep 5
   prod:
     environment: "prod"
@@ -38,7 +38,7 @@ jobs:
           name: "Arun Alagusunthram"
       - name: step2
         run: |
-          echo 'worklow on which app: ${{env.APP_NAME}}'
+          echo 'worklow on which app: ${{vars.APP_NAME}}'
           sleep 5
 
   # touch /home/ubuntu/arunalagusunthram-apr24/generated_files_arun
