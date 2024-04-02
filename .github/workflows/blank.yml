@@ -6,16 +6,21 @@ on:
 
 jobs:
   job1:
+    env: 
+      greetings: "Hello"
     runs-on: self-hosted
     steps: 
       - name: step1
         run: |
-          echo "test 1 step 1 completed"
-          sleep 30
+          echo "test 1: $greetings $name \n Github Repository  ${{GITHUB.REPOSITORY}}"
+          sleep 5
+        env: 
+          name: "Arun Alagusunthram"
       - name: step2
         run: |
           touch /home/ubuntu/arunalagusunthram-apr24/generated_files_arun
+          cat >> gene
           echo 'file created'
-          sleep 30
+          sleep 5
 ## Name is not important in a step
       - run: uname -a
