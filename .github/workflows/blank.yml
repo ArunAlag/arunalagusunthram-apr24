@@ -19,9 +19,9 @@ jobs:
           name: "Arun Alagusunthram"
       - name: step2
         run: |
-          touch /home/ubuntu/arunalagusunthram-apr24/generated_files_arun
-          cat >> gene
           echo 'file created'
           sleep 5
+
+  # touch /home/ubuntu/arunalagusunthram-apr24/generated_files_arun
 ## Name is not important in a step
       - run: uname -a
