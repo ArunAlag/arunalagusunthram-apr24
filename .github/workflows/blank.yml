@@ -19,7 +19,7 @@ jobs:
           name: "Arun Alagusunthram"
       - name: step2
         run: |
-          echo 'file created'
+          echo 'file created at : ${{vars.CREATED_DATE}}'
           sleep 5
 
   # touch /home/ubuntu/arunalagusunthram-apr24/generated_files_arun
