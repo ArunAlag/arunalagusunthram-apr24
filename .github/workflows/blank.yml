@@ -1,7 +1,6 @@
 # My very first workflow
 name: workflow1
 on: 
-  workflow_dispatch:
   push:
 
 jobs:
@@ -44,3 +43,4 @@ jobs:
   # touch /home/ubuntu/arunalagusunthram-apr24/generated_files_arun
 ## Name is not important in a step
       - run: uname -a
+
