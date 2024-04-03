@@ -7,7 +7,7 @@ jobs:
   build:
     environment: "dev"
     env: 
-      greetings: "Hello"
+      greetings: "Hola"
     # runs-on: self-hosted
     runs-on: "ubuntu-latest"
     steps: 
