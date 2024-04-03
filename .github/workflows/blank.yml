@@ -3,6 +3,7 @@ name: workflow1
 on: 
   workflow_dispatch:
   push:
+  pull_request:
 
 jobs:
   build:
@@ -21,10 +22,16 @@ jobs:
         env: 
           name: "Arun Alagusunthram"
       - name: step2
+        if: github.event_name == 'push'
         run: |
+          echo 'workflow runs when the push requst happening'
           echo 'workflow run date: ${{vars.CREATED_DATE}}'
           echo 'worklow on which app: ${{vars.APP_NAME}}'
           sleep 5
+      - name: step3
+        if: github.event_name == "pull"
+        run: |
+          echo 'workflow runs when the pull request is happening'
   prod:
     environment: "prod"
     
